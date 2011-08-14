@@ -45,3 +45,25 @@ index a65693d..2166f1b 100644
  
  	# Generate the IoImageInit.c file.
  	# Argument SHOULD ALWAYS be the exact name of the addon, case is
+diff --git a/addons/Socket/source/IoEvOutRequest.h b/addons/Socket/source/IoEvOutRequest.h
+index 00abdba..0e2572b 100644
+--- a/addons/Socket/source/IoEvOutRequest.h
++++ b/addons/Socket/source/IoEvOutRequest.h
+@@ -32,9 +32,6 @@ IoObject *IoEvOutRequest_encodeUri(IoEvOutRequest *self, IoObject *locals, IoMes
+ IoObject *IoEvOutRequest_decodeUri(IoEvOutRequest *self, IoObject *locals, IoMessage *m);
+ IoObject *IoEvOutRequest_htmlEscape(IoEvOutRequest *self, IoObject *locals, IoMessage *m);
+ 
+-/*
+-//TODO: Cheap hack, clean this shit
+-#ifndef __linux__
+ struct evbuffer {
+     u_char *buffer;
+     u_char *orig_buffer;
+@@ -46,7 +43,5 @@ struct evbuffer {
+     void (*cb)(struct evbuffer *, size_t, size_t, void *);
+     void *cbarg;
+ }; 
+-#endif // ndef __linux__ 
+-*/
+ 
+ #endif
